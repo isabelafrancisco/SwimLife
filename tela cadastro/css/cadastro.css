@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.MsgErro {
+    color: red;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.header { /*define o tamanho do header*/
+    height: 50px;
+    border-bottom: 2px solid #53C4D0;
+    background-color: #53C4D0;
+}
+
+.container { /*define como será os elementos dentro*/
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .container { /*quando se encontrarem terá essa estilização*/
+    justify-content: space-between; /*um em cada lado da tela*/
+    align-items: center;
+    height: 100%;
+}
+.navbar{ /*define como será os elementos de inicial, simulador, espaçamentos...*/
+    display: flex;
+    justify-content: space-evenly; /*espaça os campos entre si*/
+    width: 200px; /*separa um pouco mais os textos*/
+    align-items: center;
+    list-style: none; /* tira a bolinha */
+    color: #fff;
+}
+
+.header a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Karla', sans-serif;
+}
+
+.imagem2 {
+    height: 100px;
+    width: 100px;
+    margin-top: 15px;
+}

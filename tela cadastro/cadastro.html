@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwimLife | Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+          <h1><img class="imagem2" src="./assets/imgs/logoswimlife.png" alt=""></h1>
+          <ul class="navbar">
+            <li>
+              <a href="../Página Inicial/inicial.html">Inicial</a>
+            </li>
+            <li>
+              <button class="preto" onclick=""><a href="../Login/login2.html">Login</a></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="principal">
+        <div class="cadastro">
+        <h1>Cadastro</h1>
+        <p class="texto_forte">email </p>
+        <input type="text" oninput="analisar()" id="ipt_usuario" class="inputCadastro">
+        <div id="div_mensagemLogin" class="MsgErro"></div>
+        <div id="div_tlogin" class="MsgErro"></div>
+
+        <p class="texto_forte">nome </p>
+        <input type="text" oninput="analisar()" id="ipt_email" class="inputCadastro">
+        <div id="div_mensagemEmail" class="MsgErro"></div>
+
+        <p class="texto_forte">senha </p>
+        <input type="password" oninput="analisar()" id="ipt_senha" class="inputCadastro">
+        <div id="div_senha" class="MsgErro"></div>
+        <div id="div_tsenha" class="MsgErro"></div>
+
+        <button disabled onclick="cadastro()" id="button_cadastro" class="button">Cadastre-se</button>
+        <div id="div_msgFinal" class="MsgErro"></div>
+
+      </body>
+      </html>
