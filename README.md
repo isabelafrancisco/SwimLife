@@ -2,7 +2,7 @@
 
 <h1>
 <img align="center" width="80px" src="![logoswimlife](https://github.com/user-attachments/assets/49eadd2d-c0a5-4e93-9fd3-be75bff16038)" img width="80" alt="{a} logo"class="img-fluid"></a>
-    <span>SwimLife.</span>
+    <span>SwimLife</span>
 </h1>
 
 Este site foi desenvolvido para ser um sistema para que fãs de natação, ou para aqueles que se interessam pelo esporte, possam saber mais sobre esse esporte e saber sobre as notícias desse meio. 
