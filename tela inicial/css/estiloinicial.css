@@ -160,43 +160,42 @@ body {
     font-weight: bolder;
 }
 
-/* Benefícios*/
+/* SOCIAL */
 
 .social {
     background-color: #f1f5f9;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
+
 }
 
-.social .container .boxes{
+.social .container .boxes {
     display: flex;
     justify-content: space-between;
     width: 100%;
     padding: 30px 0;
+    flex-wrap: wrap;
 }
 
 .box {
     display: flex;
-    flex-direction: column;
-    align-items: left;
-    text-align: column;
-    padding: 40px;
+    flex-direction: row;
+    align-items: center;
 }
 
 .box img {
-    width: 140%;
+    width: 170px;
 }
 
-.btn-bene {
-    background-color: #53C4D0;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
+.box .box_texto1{
+    align-items: center;
+
 }
 
+.box .box_texto2{
+    flex-direction: row-reverse;
+}
 
 

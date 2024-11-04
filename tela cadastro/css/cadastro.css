@@ -1,21 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
-html, body {
+body {
     margin: 0;
     padding: 0;
-    height: 100%;
-    overflow: hidden;
-}
-
-.MsgErro {
-    color: red;
-    font-size: 12px;
-    font-weight: 800;
+    font-family: 'Karla', sans-serif;
 }
 
 .header { /*define o tamanho do header*/
-    height: 50px;
+    height: 80px;
     border-bottom: 2px solid #53C4D0;
-    background-color: #53C4D0;
+    background-color:#53C4D0;
 }
 
 .container { /*define como será os elementos dentro*/
@@ -31,10 +24,11 @@ html, body {
     align-items: center;
     height: 100%;
 }
+
 .navbar{ /*define como será os elementos de inicial, simulador, espaçamentos...*/
     display: flex;
     justify-content: space-evenly; /*espaça os campos entre si*/
-    width: 200px; /*separa um pouco mais os textos*/
+    width: 600px; /*separa um pouco mais os textos*/
     align-items: center;
     list-style: none; /* tira a bolinha */
     color: #fff;
@@ -46,8 +40,53 @@ html, body {
     font-family: 'Karla', sans-serif;
 }
 
-.imagem2 {
-    height: 100px;
+.imagem {
+    height: 75px;
+    width: 75px;
+    margin-top: 10px;
+}
+
+.agora {/* estiliza o inicial no header */
+    font-weight: 800; /*grossura da fonte*/
+}
+
+.pretocadastro {
+    background-color:black;
+    border: none;
+    padding: 8px;
+    border-radius: 25px;
+    width: 100px; 
+    color: white;
+    cursor: pointer;
+}
+
+.pretologin {
+    background-color: black;
+    border: none;
+    padding: 8px;
+    border-radius: 25px;
     width: 100px;
-    margin-top: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+/* BODY */
+
+/* Estilização do banner */
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 570px;
+    background-color: #f1f5f9;
+    flex-direction: row;
+    padding-left: 6%;
+}
+
+.banner-left {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
 }
