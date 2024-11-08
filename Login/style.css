@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
- body {
+
+body {
     margin: 0;
     padding: 0;
-    height: 100%;
-    overflow: hidden;
+    font-family: 'Karla', sans-serif;
 }
 
 .MsgErro {
@@ -26,6 +26,7 @@
     align-items: center;
 }
 
+
 .header .container { /*quando se encontrarem terá essa estilização*/
     justify-content: space-between; /*um em cada lado da tela*/
     align-items: center;
@@ -47,34 +48,37 @@
     font-family: 'Karla', sans-serif;
 }
 
-.imagem2 {
+.header .container .imagem { /* arrumar o tamanho da imagem na navbar */
     height: 75px;
     width: 75px;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .agora {/* estiliza o inicial no header */
     font-weight: 800; /*grossura da fonte*/
 }
 
-.azul {
+.pretocadastro {
     background-color:black;
     border: none;
-    padding: 8px;
     border-radius: 25px;
     width: 100px; 
     color: white;
     cursor: pointer;
+    justify-items: center;
 }
 
-.laranja {
+
+ .navbar .pretologin {
     background-color: black;
     border: none;
-    padding: 8px;
     border-radius: 25px;
     width: 100px;
     color: white;
     cursor: pointer;
+    margin-top: 2px;
+    align-items: center;
+
 }
 
 .principal{
@@ -94,7 +98,7 @@
 
 
 
-
+/* LOGIN */
 
 .Login{
     border-radius:50px ;
