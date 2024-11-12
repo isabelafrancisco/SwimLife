@@ -48,7 +48,7 @@ body {
     font-family: 'Karla', sans-serif;
 }
 
-.header .container .imagem { /* arrumar o tamanho da imagem na navbar */
+.header .container .imagem { /* arrumar o tamanho dO logo na navbar */
     height: 75px;
     width: 75px;
     margin-top: 5px;
@@ -61,34 +61,31 @@ body {
 .pretocadastro {
     background-color:black;
     border: none;
+    padding: 8px;
     border-radius: 25px;
     width: 100px; 
     color: white;
     cursor: pointer;
-    justify-items: center;
 }
 
-
- .navbar .pretologin {
+.pretologin {
     background-color: black;
     border: none;
+    padding: 8px;
     border-radius: 25px;
     width: 100px;
     color: white;
     cursor: pointer;
-    margin-top: 2px;
-    align-items: center;
-
 }
 
-.principal{
+.principal { /* QUADRADO QUE CONTÉM AS INFORMAÇOES DE CADASTRO */
     display: flex;
     flex-direction: row; /*ISSO QUE DEIXOU A IMAGEM AO LADO*/
     justify-content: space-evenly;
     margin-top: 20px;
 }
 
-.principal2{
+.principal2 {  /* QUADRADO QUE CONTÉM AS INFORMAÇOES DE LOGIN */
     display: flex;
     flex-direction: row; /*ISSO QUE DEIXOU A IMAGEM AO LADO*/
     align-items: center;
@@ -129,25 +126,25 @@ body {
 
 }
 
-.cadastro p{
+.cadastro p { /* BOTÃO DE CADASTRO */
     font-weight: 700;
     text-align: center;
 }
 
 
-.Login p{
+.Login p { /* BOTÃO DE LOGIN */
     font-weight: 700;
     text-align: center;
 }
 
-.input{
+.input { /* deixa as inputs maiores */
     width: 80%;
     height: 26px;
     border-radius: 8px;
     border-width: 1px;
 }
 
-.inputCadastro{
+.inputCadastro { /* deixa as inputs maiores */
     width: 80%;
     height: 26px;
     border-radius: 8px;
@@ -155,7 +152,7 @@ body {
     padding: 3px;
 }
 
-button{
+button{ /* BOTÃO DE CADASTRAR */
     width: 80%;
     height: 30px;
     border-radius: 8px;
@@ -165,46 +162,7 @@ button{
     font-size: 17px;
 }
 
-
-
-:root {
-    --tamanho-footer: 65px;
-    --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
-    --tamanho-login: calc(100vh - var(--tamanho-footer));
-}
-
-
-
-.cadastro .principal {
-    display: flex;
-    flex-direction: row;
-    height: var(--tamanho-login);
-    justify-content: space-evenly;
-    align-items: start;
-    margin-left: 300px;
-}
-
-.card-login {
-    background-color: #e5e5e5;
-    padding: 0 90px 20px 90px;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 5px;
-}
-
-.footer h1{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    text-align: center;
-    justify-content: center;
-    margin-left: 1000px ;
-}
-
-
-.imagem {
+.imagem { /* LOGO NA NAVBAR */
     display: flex;
     height: 500px;
     width: 450px;
@@ -214,46 +172,3 @@ button{
     
 }
 
-.imagemCadastro{
-    height: 520px;
-    width: 550px;
-    margin-left: 100px;
-    margin-top: 50px;
-}
-
-footer {
-    background-color: #010415;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    height: 50px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-/* Estiliza o rodapé da página, centralizando o conteúdo e aplicando cor de fundo e altura fixa */
-
-footer .logo {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    left: 20px;
-}
-/* Posiciona a logo no rodapé à esquerda e a alinha verticalmente */
-
-footer .logo img {
-    width: 100px;
-    height: auto;
-    margin-right: 15px;
-    margin-top: 5px;
-}
-/* Define o tamanho da logo no rodapé e o espaçamento em relação ao texto */
-
-footer b {
-    margin: 0;
-    text-align: center;
-    flex: 1;
-    font-family: 'Karla', sans-serif;
-}
