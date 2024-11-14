@@ -53,149 +53,48 @@ body {
     font-weight: 800; /*grossura da fonte*/
 }
 
-.pretocadastro {
-    background-color:black;
-    border: none;
-    padding: 8px;
-    border-radius: 25px;
-    width: 100px; 
-    color: white;
-    cursor: pointer;
-}
-
-.pretologin {
-    background-color: black;
-    border: none;
-    padding: 8px;
-    border-radius: 25px;
-    width: 100px;
-    color: white;
-    cursor: pointer;
-}
-
-/* BODY */
-
-/* Estilização do banner */
-.banner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 570px;
-    background-color: #f1f5f9;
-    flex-direction: row;
-    padding-left: 6%;
-}
-
-.banner-left {
-    display: flex;
-    flex: 1;
-    padding: 20px;
-    flex-direction: column;
-    align-items: center;
-}
-
-.banner-left .titulo{
-    font-family: 'Pragati Narrow';
-    font-size: 80px;
-    line-height: 80px;
-    padding: 0;
-    text-decoration: none;
-}
-
-.banner-left .subtitulo{
-    font-family: 'Poppins';
-    font-weight: 300;
-    font-size: 20px;
-}
-
-.banner_right img {
-    width: 80%;
-}
-
-.banner.inscreva{
-    display: flex;
-    flex: 1;
-    padding: 20px;
-    flex-direction: row;
-    align-items: center;
-    font-family: 'Pragati Narrow';
-}
-
-.banner-left h2 { /* por dentro */
-    font-size: 40px;
-    margin-bottom: 20px;
-    justify-content: center;
-    text-align: justify;
-    padding: 40px;
-    font-family: "Poppins"; 
-}
-
-.banner-right { /* imagem */
-    width: 50px;
-    flex: 1; 
-}
-
-.banner-right img { /* imagem */
-    width: 65%;
-    float: center;
-    align-self: flex-end ;
-}
-
-.btn-banner {
-    background-color: #53C4D0;
-    color: white;
-    padding: 10px 30px;
-    border-radius: 10px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 20px;
-    margin-right: 90px;
-}
-
-.btn-banner a {
-    text-decoration: none;
-    color: black;
-    font-family: 'Karla', sans-serif;
-    font-weight: bolder;
-}
-
-/* Benefícios*/
-
-.social {
-    background-color: #f1f5f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.social .container .boxes{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 30px 0;
-}
-
-.box {
+.noticia {
+    font-family: sans-serif;
     display: flex;
     flex-direction: column;
-    align-items: left;
-    text-align: column;
-    padding: 40px;
+    width: 300px;
+    justify-content: center;
 }
 
-.box img {
-    width: 140%;
-}
-
-.btn-bene {
-    background-color: #53C4D0;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 10px;
+button {
+    padding: 1rem;
+    background-color: dodgerblue;
     border: none;
-    font-size: 16px;
+    margin: 1rem;
     cursor: pointer;
+    border-radius: 8px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#res {
+    display: flex;
+    flex-direction: column;
+}
+
+.noticia_completa_1 {
+    display: none;
+}
+
+.noticia_completa_2 {
+    display: none;
+}
+
+.noticia_completa_3 {
+    display: none;
+}
+
+.noticia_completa_4 {
+    display: none;
 }
 
 
