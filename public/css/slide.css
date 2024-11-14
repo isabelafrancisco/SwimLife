@@ -1,0 +1,443 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', sans-serif;
+    background-color: black;
+}
+
+:root {
+    --tamanho-header: 70px;
+    --tamanho-banner: calc(90vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+    --tamanho-simulador: calc(90vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+    --tamanho-login: calc(90vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+    --tamanho-footer: 40px;
+  }
+
+/* LINHA BRANCA DO CABEÇALHO */
+.header {
+    height: var(--tamanho-header);
+    border-bottom:  solid white;
+}
+
+/* CABEÇALHO DO SITE */
+.header .container {
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+/* Espaço que o cabeçalho tem para trabalhar */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.container .titulo_cabeçalho {
+    width: 220px;
+    text-align: center;
+}
+
+.container .navbar_cabeçalho {
+    width: 580px;
+    text-align: center;
+}
+
+
+.container1 {
+    height: 560px;
+    display: flex;
+    width: auto;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container3 {
+    height: 560px;
+    display: flex;
+    width: auto;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(../Fotos/dojo.png);
+    background-size: 100%;
+
+}
+
+.container4 {
+    height: 560px;
+    display: flex;
+    width: auto;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(../Fotos/comprimento.jpg);
+    background-size: 100%;
+
+}
+
+/* FORMATAÇÃO DA PÁGINA DE LOGIN */
+.card-login {
+    background-color: gray;
+    padding: 20px 70px 20px 70px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+/* FORMATAÇÃO DA PÁGINA DE CADASTRO */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: inherit;
+    font-weight: 700;
+    color: gray;
+}
+
+/* TEXTO DO LOGIN */
+h2 {
+    font-weight: 600;
+}
+
+/* TEXTO SOBRE NÓS */
+h3 {
+    text-align: justify;
+}
+
+/* BOTÕES DO LOGIN E CADASTRO */
+button  {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 33px;
+}
+
+.card-cadastro {
+    background-color: gray;
+    padding: 0 90px 20px 90px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.campo {
+    width: inherit;
+}
+
+/* FORMATAÇÃO DO ESPAÇO DA TELA DE CADASTRO */
+.campo input {
+    width: inherit;
+    text-align: center;
+    border-radius: 5px;
+    padding: 6px 0 6px 0;
+    border: 2px solid blue;
+
+}
+
+/* COR DA NAVBAR DO SITE (INICIAL, NOSSAS FILIAIS, ETC.) */
+.header a {
+    text-decoration: none;
+    color: white;
+}
+/* INFORMA QUAL OPÇÃO DA NAVBAR ESTÁ NO MOMENTO DO CLIC */
+.agora {
+    font-weight: 800;
+}
+
+.navbar {
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    color: white;
+}
+
+.titulo {
+    color: white;
+    font-weight: 500;
+}
+
+.qudrante_principal {
+    background-image: url(../Fotos/Academy.jpeg);
+    background-size: 100%;
+}
+
+.quadrante2 #scrollbar {
+    height: 520px;
+}
+
+/* REFERENTE AS FILIAIS */
+.quadrante2 .box3 img, 
+            .box4 img,
+            .box5 img,
+            .box6 img {
+    clip-path: circle();
+    width: 250px;
+}
+
+.qudrante_principal {
+    color: black;
+}
+
+/* A PRIMEIRA LINHA DE FILIAIS */
+/* O PRIMEIRO QUADRANTE */
+.quadrante2 .box3 {
+    display: flex;
+    justify-content: space-evenly;
+}
+/* ESPAÇO ENTRE AS PRIMEIRAS FILIAIS */
+.quadrante2 .box3 .box3_primeiro, 
+                  .box3_segundo, 
+                  .box3_terceiro {
+    margin: 20px;
+}
+
+/* ALINHAMENTO DO TEXTO COM A FOTO */
+.quadrante2 .box3 .box3_primeiro, 
+                  .box3_segundo, 
+                  .box3_terceiro 
+                                .texto_matriz,
+                                .texto_cpq_centro,
+                                .texto_cpq_ouro_verde {
+    text-align: center;
+}
+
+/* A SEGUNDA LINHA DE FILIAIS */
+/* O PRIMEIRO QUADRANTE */
+.quadrante2 .box4 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* ESPAÇO ENTRE AS PRIMEIRAS FILIAIS */
+.quadrante2 .box4 .box4_primeiro,
+.quadrante2 .box4 .box4_segundo {
+    margin: 20px;
+}
+
+/* ALINHAMENTO DO TEXTO COM A FOTO */
+.quadrante2 .box4 .box4_primeiro,
+                  .box4_segundo 
+                                .texto_valinhos, .texto_valinhos2 {
+    text-align: center;
+}
+
+/* A TERCEIRA LINHA DE FILIAIS */
+/* O PRIMEIRO QUADRANTE */
+.quadrante2 .box5 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* ESPAÇO ENTRE AS PRIMEIRAS FILIAIS */
+.quadrante2 .box5 .box5_primeiro {
+    margin: 20px;
+}
+
+/* ALINHAMENTO DO TEXTO COM A FOTO */
+.quadrante2 .box5 .box5_primeiro 
+                                 .texto_jundiai {
+    text-align: center;
+}
+
+/* A TERCEIRA LINHA DE FILIAIS */
+/* O PRIMEIRO QUADRANTE */
+.quadrante2 .box6 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* ESPAÇO ENTRE AS PRIMEIRAS FILIAIS */
+.quadrante2 .box6 .box6_primeiro {
+    margin: 20px;
+}
+
+/* ALINHAMENTO DO TEXTO COM A FOTO */
+.quadrante2 .box6 .box6_primeiro 
+                                 .texto_portugal {
+    text-align: center;
+    text-size-adjust: 100px;
+}
+
+.container0 {
+    height: 560px;
+    display: flex;
+    width: auto;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+/* espaço após as fotos */
+.social {
+    height: 560px;
+    background-image: url(../Fotos/Academy1.jpeg);
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container .boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.texto1 {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.texto1 .imgf {
+    display: flex;
+    justify-content: center;
+}
+
+.texto1 .img {
+    justify-content: center;
+    display: flex;
+}
+
+.box .texto2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img img {
+    clip-path: circle();
+    width: 250px;
+}
+
+.footer {
+    background-color: black;
+    height: var(--tamanho-footer);
+    color: white;
+    display: flex;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.footer .container {
+    height: auto;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.version {
+    font-size: 15px;
+}
+/* Foto do logo da Skill do rodapé */
+.footer .container img {
+    width: 60px;
+}
+
+/* Inserção dos slides, com slider do index */
+section.slider{
+    margin: center;
+    width: auto;
+    height: 99%;
+    overflow: hidden;
+}
+
+.slider-content {
+    width: 400%;
+    display: flex;
+    padding-top: 14px;
+}
+
+.slider-content input{
+    display: none;
+}
+
+.slide-box {
+    width: 25%;
+    position: relative;
+    text-align: center;
+    transition: 2s;
+}
+
+.slide-box img {
+    width: 100%;
+}
+
+.nav-manual, .nav-auto {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* .nav-manual .manual-btn, .nav-auto div {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+} */
+
+.nav-manual .manual-btn:not(:last-child){
+    margin-right: 10px;
+}
+
+/* .nav-manual .manual-btn:hover {
+    background-color: black;
+} */
+
+/* #radio1:checked ~ .nav-auto .auto-btn1 {
+    background-color: black;
+}
+
+#radio2:checked ~ .nav-auto .auto-btn2 {
+    background-color: black;
+}
+
+#radio3:checked ~ .nav-auto .auto-btn3 {
+    background-color: black;
+} */
+
+#radio1:checked ~ .primeiro {
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro {
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .primeiro {
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .primeiro {
+    margin-left: -75%;
+}

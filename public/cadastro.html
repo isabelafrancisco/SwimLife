@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwimLife | Cadastro</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./Fotos/img/logoswimlife.png">
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <h1><img class="imagem" src="./Fotos/img/logoswimlife.png" alt=""></h1>
+      <ul class="navbar">
+        <li class="agora">
+          <a href="./index.html">Home</a>
+        </li>
+        <li>
+            <a href="./sobremim.html">Sobre Mim</a>
+          </li>
+        <li>
+          <button class="pretocadastro">Cadastro</button>
+          <a href="./login2.html" >
+          </a>
+        </li>
+        <li>
+          <button class="pretologin"><a href="./login2.html">Login</a></button>
+        </li>
+      </ul>
+    </div>
+  </div>
+    <div class="principal">
+            <div class="cadastro">
+            <h1>Cadastro</h1>
+            <p class="texto_forte">Digite o usuário: </p>
+            <input type="text" id="ipt_usuario" class="inputCadastro">
+            <div id="div_mensagemLogin" class="MsgErro"></div>
+            <div id="div_tlogin" class="MsgErro"></div>
+
+            <p class="texto_forte">Informe seu email: </p>
+            <input type="text" id="ipt_email" class="inputCadastro">
+            <div id="div_mensagemEmail" class="MsgErro"></div>
+
+            <p class="texto_forte">Informe sua senha: </p>
+            <input type="password" id="ipt_senha" class="inputCadastro">
+            <div id="div_senha" class="MsgErro"></div>
+            <div id="div_tsenha" class="MsgErro"></div>
+
+            <p class="texto_forte">Confirme sua senha: </p>
+            <input type="password" id="ipt_senhaconfirmada" class="inputCadastro">
+            <div id="div_senhaConfirmada" class="MsgErro"></div> <br>
+
+            <button onclick="cadastro()" id="button_cadastro" class="button">Cadastrar</button>
+            <div id="div_msgFinal" class="MsgErro"></div>
+
+            <div>
+                <p>Já possui um cadastro?</p>
+                <a href="./login2.html" style="color: #53C4D0;"><p style="color:#53C4D0;">Clique aqui para fazer o login</p></a>
+            </div>
+            </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+
+  // Array para armazenar empresas cadastradas para validação de código de ativação 
+  let listaEmpresasCadastradas = [];
+
+  function cadastro() {
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var nomeVar = ipt_usuario.value;
+    var emailVar = ipt_email.value;
+    var senhaVar = ipt_senha.value;
+    var confirmacaoSenhaVar = ipt_senhaconfirmada.value;
+
+    // Verificando se há algum campo em branco
+    if (
+      nomeVar == "" ||
+      emailVar == "" ||
+      senhaVar == "" ||
+      confirmacaoSenhaVar == ""
+    ) {
+      // cardErro.style.display = "block";
+      // mensagem_erro.innerHTML =
+      //   "(Mensagem de erro para todos os campos em branco)";
+
+      
+      // return false;
+    } else {
+      setInterval(sumirMensagem, 2000);
+    }
+
+    // // Verificando se o código de ativação é de alguma empresa cadastrada
+    // for (let i = 0; i < listaEmpresasCadastradas.length; i++) {
+    //   if (listaEmpresasCadastradas[i].codigo_ativacao == codigoVar) {
+    //     idEmpresaVincular = listaEmpresasCadastradas[i].id
+    //     console.log("Código de ativação válido.");
+    //     break;
+    //   } else {
+    //     cardErro.style.display = "block";
+    //     mensagem_erro.innerHTML = "(Mensagem de erro para código inválido)";
+    //     finalizarAguardar();
+    //   }
+    // }
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        nomeServer: nomeVar,
+        emailServer: emailVar,
+        senhaServer: senhaVar
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          setTimeout(() => {
+          }, "2000");
+          window.location = "login2.html";
+
+          limparFormulario();
+
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        // finalizarAguardar();
+      });
+
+    return false;
+  }
+
+  // // Listando empresas cadastradas 
+  // function listar() {
+  //   fetch("/empresas/listar", {
+  //     method: "GET",
+  //   })
+  //     .then(function (resposta) {
+  //       resposta.json().then((empresas) => {
+  //         empresas.forEach((empresa) => {
+  //           listaEmpresasCadastradas.push(empresa);
+
+  //           console.log("listaEmpresasCadastradas")
+  //           console.log(listaEmpresasCadastradas[0].codigo_ativacao)
+  //         });
+  //       });
+  //     })
+  //     .catch(function (resposta) {
+  //       console.log(`#ERRO: ${resposta}`);
+  //     });
+  // }
+
+  function sumirMensagem() {
+    // cardErro.style.display = "none";
+  }
+</script>
