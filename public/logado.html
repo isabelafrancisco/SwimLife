@@ -66,9 +66,10 @@
   <div id="noticia_completa_4" class="noticia_completa_4">
      O Brasil encerrou neste domingo, 9 de agosto, a participação no World Series de natação paralímpica disputada em Limoges (França) com o total de 24 conquistas (dez ouros, dez pratas e quatro bronzes) considerando as medalhas obtidas nas categorias adulto e júnior.
     <button onclick="fechar4()">Fechar</button>
+
     
   </div>
-  <div id="res">
+  <div id="res" style="display: none;">
   <div id="cliques_1">Cliques na notícia 1: 0</div>
   <div id="cliques_2">Cliques na notícia 2: 0</div>
   <div id="cliques_3">Cliques na notícia 3: 0</div>
@@ -86,7 +87,7 @@
   var cliques_4 = 0;
 
   function fechar1() {
-    document.getElementById("noticia_completa_1").style.display = "none";
+    document.getElementById("noticia_completa_1").style.display = "none"; /* none a notícia não é mais exibida */
   }
 
   function fechar2() {
@@ -105,27 +106,27 @@
   function clicar() {
     cliques_1++; 
     document.getElementById("cliques_1").innerHTML = `Cliques na notícia 1: ${cliques_1}`; 
-    document.getElementById("noticia_completa_1").style.display = "block"; 
+    document.getElementById("noticia_completa_1").style.display = "block";  /* controlar a visibilidade das notícias completas */
   }
 
  
   function clicar2() {
     cliques_2++; 
     document.getElementById("cliques_2").innerHTML = `Cliques na notícia 2: ${cliques_2}`; 
-    document.getElementById("noticia_completa_2").style.display = "block"; 
+    document.getElementById("noticia_completa_2").style.display = "block"; /* controlar a visibilidade das notícias completas */
   }
 
   
   function clicar3() {
     cliques_3++; 
     document.getElementById("cliques_3").innerHTML = `Cliques na notícia 3: ${cliques_3}`; 
-    document.getElementById("noticia_completa_3").style.display = "block"; 
+    document.getElementById("noticia_completa_3").style.display = "block"; /* controlar a visibilidade das notícias completas */
 
   }
   function clicar4() {
     cliques_4++; 
     document.getElementById("cliques_4").innerHTML = `Cliques na notícia 4: ${cliques_4}`; 
-    document.getElementById("noticia_completa_4").style.display = "block"; 
+    document.getElementById("noticia_completa_4").style.display = "block"; /* controlar a visibilidade das notícias completas */
 
   }
 </script>
