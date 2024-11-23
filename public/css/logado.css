@@ -53,6 +53,8 @@ body {
     font-weight: 800; /*grossura da fonte*/
 }
 
+
+
 /* BANNER NOTÍCIA */
 .banner2 {
     height: var(--tamanho-banner);
@@ -118,5 +120,159 @@ a {
     display: none;
 }
 
+
+/* CARD NOTÍCIAS */
+
+/* 1° PRIMEIRA NOTÍCIA */
+
+* {
+    padding: 0; /* arruma o espaçamento entre os textos */
+    margin: 0; /* arruma o espaçamento entre os textos */
+    /* box-sizing: border-box; arruma o jeito das letras */ 
+   }
+   
+   body {
+    background: #f1f5f9;
+    font-family: monospace;
+   }
+
+   .c-card1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    flex-direction: column;
+    padding: 1rem; /* deixa espaçado entre a navbar e as imagens */
+    margin: 2rem; /* deixa espaçado entre a navbar e as imagens */
+    color: #53C4D0;
+    box-shadow: 0 0 20px rgba(93, 93, 93, 0.2); /* a cor de funco do card */
+    text-align: center; /* deixa a imagem centralizada*/
+    height: 5%; 
+    font-size: 15px;
+
+   }
+
+   .c-card1 img {
+    border-radius: 4rem;
+   }
+   
+   .c-card p { /* breve descrição sobre mim */
+    width: 20rem;
+    text-align: left;
+    padding: 0.5rem;
+   }
+
+
+   /* 2° PRIMEIRA NOTÍCIA */
+   
+* {
+    padding: 0; /* arruma o espaçamento entre os textos */
+    margin: 0; /* arruma o espaçamento entre os textos */
+    /* box-sizing: border-box; arruma o jeito das letras */ 
+   }
+   
+   body {
+    background: #f1f5f9;
+    font-family: monospace;
+   }
+
+   .c-card2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    flex-direction: column;
+    padding: 1rem; /* deixa espaçado entre a navbar e as imagens */
+    margin: 2rem; /* deixa espaçado entre a navbar e as imagens */
+    color: #53C4D0;
+    box-shadow: 0 0 20px rgba(93, 93, 93, 0.2); /* a cor de funco do card */
+    text-align: center; /* deixa a imagem centralizada*/
+    height: 5%; 
+    font-size: 15px;
+   }
+
+   .c-card2 h2 {
+    padding-bottom: 10px; /* espaçamento entre os textos */
+   }
+   
+   .c-card p { /* breve descrição sobre mim */
+    width: 20rem;
+    text-align: left;
+    padding: 0.5rem;
+   }
+
+
+   /* 3° NOTÍCIA */
+
+   * {
+    padding: 0; /* arruma o espaçamento entre os textos */
+    margin: 0; /* arruma o espaçamento entre os textos */
+    /* box-sizing: border-box; arruma o jeito das letras */ 
+   }
+   
+   body {
+    background: #f1f5f9;
+    font-family: monospace;
+   }
+
+   .c-card3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    flex-direction: column;
+    padding: 1rem; /* deixa espaçado entre a navbar e as imagens */
+    margin: 2rem; /* deixa espaçado entre a navbar e as imagens */
+    color: #53C4D0;
+    box-shadow: 0 0 20px rgba(93, 93, 93, 0.2); /* a cor de funco do card */
+    text-align: center; /* deixa a imagem centralizada*/
+    height: 5%; 
+    font-size: 15px;
+   }
+
+   .c-card3 h2 {
+    padding-bottom: 10px; /* espaçamento entre os textos */
+   }
+   
+   .c-card p { /* breve descrição sobre mim */
+    width: 20rem;
+    text-align: left;
+    padding: 0.5rem;
+   }
+
+
+   /* 4° NOTÍCIA */
+
+   * {
+    padding: 0; /* arruma o espaçamento entre os textos */
+    margin: 0; /* arruma o espaçamento entre os textos */
+    /* box-sizing: border-box; arruma o jeito das letras */ 
+   }
+   
+   body {
+    background: #f1f5f9;
+    font-family: monospace;
+   }
+
+   .c-card4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    flex-direction: column;
+    padding: 1rem; /* deixa espaçado entre a navbar e as imagens */
+    margin: 2rem; /* deixa espaçado entre a navbar e as imagens */
+    color: #53C4D0;
+    box-shadow: 0 0 20px rgba(93, 93, 93, 0.2); /* a cor de funco do card */
+    text-align: center; /* deixa a imagem centralizada*/
+    height: 5%; 
+    font-size: 15px;
+   }
+
+   .c-card4 h2 {
+    padding-bottom: 10px; /* espaçamento entre os textos */
+   }
+   
+   .c-card p { /* breve descrição sobre mim */
+    width: 20rem;
+    text-align: left;
+    padding: 0.5rem;
+   }
 
 
