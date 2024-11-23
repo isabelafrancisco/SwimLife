@@ -53,6 +53,27 @@ body {
     font-weight: 800; /*grossura da fonte*/
 }
 
+/* BANNER NOTÍCIA */
+.banner2 {
+    height: var(--tamanho-banner);
+    background-image: url('https://i.pinimg.com/originals/85/02/20/8502209caddc3417e687382704c59e1c.gif');
+    background-size: cover;
+    background-position: center;
+}
+
+.banner2 .container p {
+    width: 70%;
+    font-size: 70px;
+    justify-content: center;
+    align-items: center;
+}
+.banner2 .container{
+    justify-content:flex-start;
+    align-items: center;
+    height: 100%;
+    color: white;
+}
+
 .noticia {
     font-family: sans-serif;
     display: flex;

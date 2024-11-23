@@ -25,7 +25,7 @@ function autenticar(req, res) {
                                 // if (resultadoAquarios.length > 0) {
                                     res.json({
                                         id: resultadoAutenticar[0].idcadastro,
-                                        nome: resultadoAutenticar[0].nome,
+                                        nome: resultadoAutenticar[0].usuario,
                                         // cpf: resultadoAutenticar[0].cpf,
                                         email: resultadoAutenticar[0].email,
                                         senha: resultadoAutenticar[0].senha
@@ -94,7 +94,57 @@ function cadastrar(req, res) {
     }
 }
 
+function inserir(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var idNoticia = req.body.idNoticiaServer;
+    var idUsuario = req.body.idUsuarioServer;
+
+        usuarioModel.inserir(idUsuario, idNoticia)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+}
+
+function plotar(req, res){
+        usuarioModel.plotar()
+            .then(
+                function (resultadoAutenticar) {
+                      res.json({
+                                        noticia1: resultadoAutenticar[0].noticia, 
+                                        quantidade1: resultadoAutenticar[0].quantidade,
+                                        noticia2: resultadoAutenticar[1].noticia, 
+                                        quantidade2: resultadoAutenticar[1].quantidade,
+                                        noticia3: resultadoAutenticar[2].noticia, 
+                                        quantidade3: resultadoAutenticar[2].quantidade,
+                                        noticia4: resultadoAutenticar[3].noticia, 
+                                        quantidade4: resultadoAutenticar[3].quantidade,
+                                        
+                                    });}
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log("\nHouve um erro ao realizar o login! Erro: ", erro.sqlMessage);
+                    res.status(500).json(erro.sqlMessage);
+                } 
+            );
+    
+}
+
+
 module.exports = {
     autenticar,
-    cadastrar
+    cadastrar,
+    inserir,
+    plotar
 }
