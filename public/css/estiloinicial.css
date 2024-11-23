@@ -10,8 +10,8 @@ body {
 
 .header { /*define o tamanho do header*/
     height: 80px;
-    border-bottom: 2px solid #53C4D0;
-    background-color:#53C4D0;
+    /* border-bottom: 2px solid #53C4D0; */
+    background-color: rgba(4, 74, 92, 1);
 }
 
 .container { /*define como será os elementos dentro*/
@@ -44,9 +44,9 @@ body {
 }
 
 .imagem {
-    height: 75px;
-    width: 75px;
-    margin-top: 10px;
+    height: 50px;
+    width: 140px;
+    margin-top: 11px;
 }
 
 .agora {/* estiliza o inicial no header */
@@ -54,7 +54,7 @@ body {
 }
 
 .pretocadastro {
-    background-color:black;
+    background-color:#53C4D0;
     border: none;
     padding: 8px;
     border-radius: 25px;
@@ -64,7 +64,7 @@ body {
 }
 
 .pretologin {
-    background-color: black;
+    background-color: #53C4D0;
     border: none;
     padding: 8px;
     border-radius: 25px;
@@ -92,6 +92,11 @@ body {
     padding: 20px;
     flex-direction: column;
     align-items: center;
+    color: rgba(4, 74, 92, 1);
+}
+
+.banner-left .subtitulo {
+    color: black;
 }
 
 .banner-left .titulo{
@@ -155,7 +160,7 @@ body {
 
 .btn-banner a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-family: 'Karla', sans-serif;
     font-weight: bolder;
 }
@@ -218,8 +223,9 @@ body {
     padding: 30px;
 }
 
-.box .box_texto1 { 
+.box .box_texto1 .texto1{ 
     text-align: center;  
+    color: rgba(4, 74, 92, 1);
     
 }
 

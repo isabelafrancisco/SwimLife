@@ -10,8 +10,8 @@ body {
 
 .header { /*define o tamanho do header*/
     height: 80px;
-    border-bottom: 2px solid #53C4D0;
-    background-color:#53C4D0;
+    /* border-bottom: 2px solid #53C4D0; */
+    background-color:rgba(4, 74, 92, 1);
 }
 
 .container { /*define como será os elementos dentro*/
@@ -44,9 +44,10 @@ body {
 }
 
 .imagem {
-    height: 75px;
-    width: 75px;
-    margin-top: 10px;
+        height: 50px;
+        width: 140px;
+        margin-top: 11px;
+    
 }
 
 .agora {/* estiliza o inicial no header */
@@ -86,7 +87,8 @@ body {
 
 button {
     padding: 1rem;
-    background-color: dodgerblue;
+    background-color: #53C4D0;
+    color: white;
     border: none;
     margin: 1rem;
     cursor: pointer;
@@ -143,8 +145,8 @@ a {
     flex-direction: column;
     padding: 1rem; /* deixa espaçado entre a navbar e as imagens */
     margin: 2rem; /* deixa espaçado entre a navbar e as imagens */
-    color: #53C4D0;
-    box-shadow: 0 0 20px rgba(93, 93, 93, 0.2); /* a cor de funco do card */
+    color: black;
+    box-shadow: 0 0 20px #bfdbfe; /* a cor de funco do card */
     text-align: center; /* deixa a imagem centralizada*/
     height: 5%; 
     font-size: 15px;
@@ -153,7 +155,7 @@ a {
 
    .c-card1 h2 {
     padding-bottom: 10px; /* espaçamento entre os textos */
-    color: black;
+    color: #53C4D0;
    }
 
    .c-card1 img1 {
@@ -188,8 +190,8 @@ a {
     flex-direction: column;
     padding: 1rem; /* deixa espaçado entre a navbar e as imagens */
     margin: 2rem; /* deixa espaçado entre a navbar e as imagens */
-    color: #53C4D0;
-    box-shadow: 0 0 20px rgba(93, 93, 93, 0.2); /* a cor de funco do card */
+    color: black;
+    box-shadow: 0 0 20px #bfdbfe; /* a cor de funco do card */
     text-align: center; /* deixa a imagem centralizada*/
     height: 5%; 
     font-size: 15px;
@@ -201,7 +203,7 @@ a {
 
    .c-card2 h2 {
     padding-bottom: 10px; /* espaçamento entre os textos */
-    color: black;
+    color: #53C4D0;
    }
    
    .c-card p { /* breve descrição sobre mim */
@@ -231,8 +233,8 @@ a {
     flex-direction: column;
     padding: 1rem; /* deixa espaçado entre a navbar e as imagens */
     margin: 2rem; /* deixa espaçado entre a navbar e as imagens */
-    color: #53C4D0;
-    box-shadow: 0 0 20px rgba(93, 93, 93, 0.2); /* a cor de funco do card */
+    color: black;
+    box-shadow: 0 0 20px #bfdbfe;; /* a cor de funco do card */
     text-align: center; /* deixa a imagem centralizada*/
     height: 5%; 
     font-size: 15px;
@@ -244,7 +246,7 @@ a {
 
    .c-card3 h2 {
     padding-bottom: 10px; /* espaçamento entre os textos */
-    color: black;
+    color: #53C4D0;
    }
    
    .c-card p { /* breve descrição sobre mim */
@@ -263,7 +265,7 @@ a {
    }
    
    body {
-    background: #dbeafe;
+    background: #f1f5f9;
     font-family: monospace;
    }
 
@@ -274,7 +276,7 @@ a {
     flex-direction: column;
     padding: 1rem; /* deixa espaçado entre a navbar e as imagens */
     margin: 2rem; /* deixa espaçado entre a navbar e as imagens */
-    color: #53C4D0;
+    color: black; /* breve descrição da notícia */
     box-shadow: 0 0 20px #bfdbfe; /* a cor de funco do card */
     text-align: center; /* deixa a imagem centralizada*/
     height: 5%; 
@@ -287,7 +289,7 @@ a {
 
    .c-card4 h2 {
     padding-bottom: 10px; /* espaçamento entre os textos */
-    color: black;
+    color: #53C4D0;
    }
    
    .c-card p { /* breve descrição sobre mim */

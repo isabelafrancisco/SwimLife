@@ -6,8 +6,8 @@ body {
 
 .header { /*define o tamanho do header*/
     height: 80px;
-    border-bottom: 2px solid #53C4D0;
-    background-color:#53C4D0;
+    /* border-bottom: 2px solid #53C4D0; */
+    background-color:rgba(4, 74, 92, 1);
 }
 
 .container { /*define como será os elementos dentro*/
@@ -50,7 +50,7 @@ body {
 }
 
 .pretocadastro {
-    background-color:black;
+    background-color:#53C4D0;
     border: none;
     padding: 8px;
     border-radius: 25px;
@@ -60,7 +60,7 @@ body {
 }
 
 .pretologin {
-    background-color: black;
+    background-color: #53C4D0;
     border: none;
     padding: 8px;
     border-radius: 25px;
@@ -178,7 +178,7 @@ body {
     padding: 1rem; /* deixa espaçado entre a navbar e as imagens */
     margin: 2rem; /* deixa espaçado entre a navbar e as imagens */
     color: #53C4D0;
-    box-shadow: 0 0 20px rgba(93, 93, 93, 0.2); /* a cor de funco do card */
+    box-shadow: 0 0 20px #bfdbfe; /* a cor de funco do card */
     text-align: center; /* deixa a imagem centralizada*/
     height: 5%; 
     font-size: 15px;
@@ -190,9 +190,10 @@ body {
    }
    
    .c-card p { /* breve descrição sobre mim */
-    width: 20rem;
+    /* width: 20rem; */
     text-align: left;
     padding: 0.5rem;
+    color: black;
    }
 
 
@@ -217,7 +218,7 @@ body {
     padding: 1rem; /* deixa espaçado entre a navbar e as imagens */
     margin: 2rem; /* deixa espaçado entre a navbar e as imagens */
     color: #53C4D0;
-    box-shadow: 0 0 20px rgba(93, 93, 93, 0.2); /* a cor de funco do card */
+    box-shadow: 0 0 20px #bfdbfe; /* a cor de funco do card */
     text-align: center; /* deixa a imagem centralizada*/
     height: 5%; 
     font-size: 15px;
@@ -227,10 +228,11 @@ body {
     padding-bottom: 10px; /* espaçamento entre os textos */
    }
    
-   .c-card p { /* breve descrição sobre mim */
-    width: 20rem;
+   .c-card2 p { /* breve descrição sobre mim */
+    /* width: 20rem; */
     text-align: left;
     padding: 0.5rem;
+    color: black;
    }
 
    
