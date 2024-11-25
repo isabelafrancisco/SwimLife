@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SwimLife | Cadastro</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="stylesheet" href="./css/componentes.css">
     <link rel="icon" href="./Fotos/img/logoswimlife.png">
     <script src="./js/sessao.js"></script>
 </head>
@@ -17,7 +18,7 @@
           <a href="./index.html">Home</a>
         </li>
         <li>
-            <a href="./sobremim.html">Sobre Mim</a>
+          <a href="./sobremim.html">Sobre Mim</a>
           </li>
         <li>  <a href="./login2.html">
           <button class="pretocadastro">Cadastro</button>
@@ -59,11 +60,11 @@
             <input type="password" id="ipt_senhaconfirmada" class="inputCadastro">
             <div id="div_senhaConfirmada" class="MsgErro"></div> <br>
 
-            <button onclick="cadastro()" id="button_cadastro" class="button">Cadastrar</button>
+            <button onclick="cadastro()" id="button_cadastro" class="button_cadastro">Cadastrar</button>
             <div id="div_msgFinal" class="MsgErro"></div>
 
-            <div>
-                <p1>Já possui um cadastro?</p1>
+            <div class="verificarSePoussuiCadastro">
+                <p class="p1">Já possui um cadastro?</p1>
                 <a href="./login2.html" style="color: white;"><p style="color:white;">Clique aqui para fazer o login</p></a>
             </div>
             </div>

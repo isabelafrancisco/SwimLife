@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
-
-/* MENSAGEM DE CADASTRO E LOGIN */
+* MENSAGEM DE CADASTRO E LOGIN */
 .alerta_erro{
     display: flex;
     justify-content: flex-end;
@@ -25,6 +23,78 @@
   }
 
 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+}
+
+.header { /*define o tamanho do header*/
+    height: 80px;
+    /* border-bottom: 2px solid #53C4D0; */
+    background-color: rgba(4, 74, 92, 1);
+}
+
+.container { /*define como será os elementos dentro*/
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .container { /*quando se encontrarem terá essa estilização*/
+    justify-content: space-between; /*um em cada lado da tela*/
+    align-items: center;
+    height: 100%;
+}
+
+.navbar { /*define como será os elementos de inicial, simulador, espaçamentos...*/
+    display: flex;
+    justify-content: space-evenly; /*espaça os campos entre si*/
+    width: 600px; /*separa um pouco mais os textos*/
+    align-items: center;
+    list-style: none; /* tira a bolinha */
+    color: #fff;
+}
+
+.header a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Karla', sans-serif;
+}
+
+.imagem {
+    height: 50px;
+    width: 140px;
+    margin-top: 11px;
+
+}
+
+a:hover {/* estiliza o inicial no header */
+    font-weight: bold; /*grossura da fonte*/
+    color: #53C4D0;
+}
+
+.pretocadastro {
+    background-color:#53C4D0;
+    border: none;
+    padding: 8px;
+    border-radius: 25px;
+    width: 100px; 
+    color: white;
+    cursor: pointer;
+}
+
+.pretologin {
+    background-color: #53C4D0;
+    border: none;
+    padding: 8px;
+    border-radius: 25px;
+    width: 100px;
+    color: white;
+    cursor: pointer;
+}
 
 /* STYLE DAS PÁGINAS DE CADASTRO E LOGIN */
 
@@ -57,7 +127,6 @@ body {
     align-items: center;
 }
 
-
 .header .container { /*quando se encontrarem terá essa estilização*/
     justify-content: space-between; /*um em cada lado da tela*/
     align-items: center;
@@ -80,16 +149,15 @@ body {
 }
 
 .header .container .imagem { /* arrumar o tamanho do logo na navbar */
-        height: 50px;
-        width: 140px;
-        margin-top: 11px;
-    
+    height: 50px;
+    width: 140px;
+    margin-top: 11px;
+
 }
 
 .agora {/* estiliza o inicial no header */
-    font-weight: 800; /*grossura da fonte*/
+font-weight: 800; /*grossura da fonte*/
 }
-
 
 a:hover {/* estiliza o inicial no header */
     font-weight: bold; /*grossura da fonte*/
@@ -137,8 +205,6 @@ p {
     align-items: center;
 }
 
-
-
 /* BORDA DE LOGIN E CADASTRO*/
 
 .Login{
@@ -154,7 +220,6 @@ p {
     border-width: 1px;
     height: 480px;
 }
- 
 
 .cadastro {
     border-radius: 50px; /* deixa a borda azul em volta das informações de cadastro e login */
@@ -176,9 +241,7 @@ p {
     text-align: center;
     color: white;
     flex-direction: column;
-
 }
-
 
 .Login p2 { /* BOTÃO DE LOGIN */
     font-weight: 700;
@@ -187,6 +250,20 @@ p {
     align-items: center;
     
     
+}
+
+.verificarSePoussuiCadastro {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    /* border: solid red; */
+}
+
+.verificarSePoussuiCadastro p {
+    margin: 0;
+    padding: 5px 0;
 }
 
 .input { /* deixa as inputs maiores aonde o usuário digita */
@@ -204,7 +281,7 @@ p {
     padding: 3px;
 }
 
-button{ /* BOTÃO DE CADASTRAR E LOGIN */
+.button_cadastro { /* BOTÃO DE CADASTRAR E LOGIN */
     width: 80%;
     height: 30px;
     border-radius: 8px;
@@ -213,14 +290,3 @@ button{ /* BOTÃO DE CADASTRAR E LOGIN */
     background-color: #0062d1;
     font-size: 17px;
 }
-
-.imagem { /* LOGO NA NAVBAR */
-    display: flex;
-    height: 500px;
-    width: 450px;
-    justify-content: space-evenly;
-    flex-direction: row;
-
-    
-}
-
