@@ -6,6 +6,7 @@
     <title>SwimLife | Cadastro</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./Fotos/img/logoswimlife.png">
+    <script src="./js/sessao.js"></script>
 </head>
 <body>
   <div class="header">
@@ -18,9 +19,8 @@
         <li>
             <a href="./sobremim.html">Sobre Mim</a>
           </li>
-        <li>
+        <li>  <a href="./login2.html">
           <button class="pretocadastro">Cadastro</button>
-          <a href="./login2.html" >
           </a>
         </li>
         <li>
@@ -29,6 +29,15 @@
       </ul>
     </div>
   </div>
+
+
+  <div class="alerta_erro">
+    <div class="card_erro" id="cardErro">
+      <span id="mensagem_erro"></span>
+    </div>
+  </div>
+
+
     <div class="principal">
             <div class="cadastro">
             <h1>Cadastro</h1>
@@ -65,9 +74,6 @@
 
 <script>
 
-  // Array para armazenar empresas cadastradas para validação de código de ativação 
-  let listaEmpresasCadastradas = [];
-
   function cadastro() {
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
@@ -81,31 +87,57 @@
       nomeVar == "" ||
       emailVar == "" ||
       senhaVar == "" ||
-      confirmacaoSenhaVar == ""
+      confirmacaoSenhaVar == "" 
+     
     ) {
-      // cardErro.style.display = "block";
-      // mensagem_erro.innerHTML =
-      //   "(Mensagem de erro para todos os campos em branco)";
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "Preencha todos os campos para continuar";
 
-      
-      // return false;
-    } else {
-      setInterval(sumirMensagem, 2000);
+      finalizarAguardar();
+      return false;
+
+
+    } else if (nomeVar.length < 1 ) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "Insira um nome válido";
+
+      finalizarAguardar();
+      return false;
+
+    } else if (emailVar.includes('@') == false && emailVar.includes('.') == false) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "E-mail inválido";
+
+      finalizarAguardar();
+      return false;
+
     }
+    else if (senhaVar.length < 6) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "Senha deve conter no mínimo 6 caracteres";
 
-    // // Verificando se o código de ativação é de alguma empresa cadastrada
-    // for (let i = 0; i < listaEmpresasCadastradas.length; i++) {
-    //   if (listaEmpresasCadastradas[i].codigo_ativacao == codigoVar) {
-    //     idEmpresaVincular = listaEmpresasCadastradas[i].id
-    //     console.log("Código de ativação válido.");
-    //     break;
-    //   } else {
-    //     cardErro.style.display = "block";
-    //     mensagem_erro.innerHTML = "(Mensagem de erro para código inválido)";
-    //     finalizarAguardar();
-    //   }
-    // }
+      finalizarAguardar();
+      return false;
 
+    }
+    else if (confirmacaoSenhaVar != senhaVar) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "Confirmação de senha inválida";
+
+        finalizarAguardar();
+        return false;
+
+      } else {
+        setInterval(sumirMensagem, 5000);
+      }
+
+
+    // enviando para o nodeJs
     // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
       method: "POST",
@@ -142,27 +174,8 @@
     return false;
   }
 
-  // // Listando empresas cadastradas 
-  // function listar() {
-  //   fetch("/empresas/listar", {
-  //     method: "GET",
-  //   })
-  //     .then(function (resposta) {
-  //       resposta.json().then((empresas) => {
-  //         empresas.forEach((empresa) => {
-  //           listaEmpresasCadastradas.push(empresa);
-
-  //           console.log("listaEmpresasCadastradas")
-  //           console.log(listaEmpresasCadastradas[0].codigo_ativacao)
-  //         });
-  //       });
-  //     })
-  //     .catch(function (resposta) {
-  //       console.log(`#ERRO: ${resposta}`);
-  //     });
-  // }
-
   function sumirMensagem() {
     // cardErro.style.display = "none";
   }
+
 </script>

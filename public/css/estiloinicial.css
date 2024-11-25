@@ -49,9 +49,12 @@ body {
     margin-top: 11px;
 }
 
-.agora {/* estiliza o inicial no header */
-    font-weight: 800; /*grossura da fonte*/
+
+a:hover {/* estiliza o inicial no header */
+    font-weight: bold; /*grossura da fonte*/
+    color: #53C4D0;
 }
+
 
 .pretocadastro {
     background-color:#53C4D0;

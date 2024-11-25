@@ -1,5 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
+/* MENSAGEM DE CADASTRO E LOGIN */
+.alerta_erro{
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .card_erro {
+    display: none;
+    background-color: #fff;
+    color: #53C4D0;
+    width: 230px;
+    position: fixed;
+    border-radius: 15px;
+    border: #53C4D0 3px solid;
+    padding: 10px;
+    margin-right: 10%;
+  }
+  
+  .card_erro #mensagem_erro{
+    font-weight: 500;
+    font-size: 20px;
+    font-family: "Afacad Flux", sans-serif;
+  }
+
+
+
+/* STYLE DAS PÁGINAS DE CADASTRO E LOGIN */
+
 body {
     margin: 0;
     padding: 0;
@@ -11,14 +39,8 @@ body {
         background-size: cover; 
         background-color: aliceblue;
         width: 100%;
-        height: 400px;
+        height: 200px;
     
-}
-
-.MsgErro {
-    color: red;
-    font-size: 12px;
-    font-weight: 800;
 }
 
 .header { /*define o tamanho do header*/
@@ -57,7 +79,7 @@ body {
     font-family: 'Karla', sans-serif;
 }
 
-.header .container .imagem { /* arrumar o tamanho dO logo na navbar */
+.header .container .imagem { /* arrumar o tamanho do logo na navbar */
         height: 50px;
         width: 140px;
         margin-top: 11px;
@@ -66,6 +88,10 @@ body {
 
 .agora {/* estiliza o inicial no header */
     font-weight: 800; /*grossura da fonte*/
+}
+a:hover {/* estiliza o inicial no header */
+    font-weight: bold; /*grossura da fonte*/
+    color: #53C4D0;
 }
 
 .pretocadastro {
@@ -97,16 +123,21 @@ body {
 
 .principal2 {  /* QUADRADO QUE CONTÉM AS INFORMAÇOES DE LOGIN */
     display: flex;
-    flex-direction: row; /*ISSO QUE DEIXOU A IMAGEM AO LADO*/
+    flex-direction: row; 
     align-items: center;
     justify-content: space-evenly;
     margin-top: 20px;
-    /* color: white; */
+
+}
+
+p {
+    font-weight: bold;
+    align-items: center;
 }
 
 
 
-/* LOGIN */
+/* BORDA DE LOGIN E CADASTRO*/
 
 .Login{
     border-radius:50px ;
@@ -121,8 +152,9 @@ body {
     border-width: 1px;
     height: 480px;
 }
+ 
 
-.cadastro{
+.cadastro {
     border-radius: 50px; /* deixa a borda azul em volta das informações de cadastro e login */
     width: 450px;
     display: flex;

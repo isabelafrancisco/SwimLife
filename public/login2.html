@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./Fotos/img/logoswimlife.png">
     <link rel="preconnect" href="./index.html">
+    <script src="./js/sessao.js"></script>
 </head>
 <body>
   <div class="header">
@@ -34,6 +35,13 @@
       </ul>
     </div>
   </div>
+
+  <div class="alerta_erro">
+    <div class="card_erro" id="cardErro">
+      <span id="mensagem_erro"></span>
+    </div>
+  </div>
+
     <div class="principal2">
             <div class="Login">
                 <h1>Login</h1>
@@ -41,6 +49,9 @@
             <input type="text" id="ipt_usuario" class="input"><br>
             <p class="texto_forte">Digite a senha: </p>
             <input type="password" id="ipt_senha" class="input"><br>
+
+              <div id="div_erros_login"></div>
+
             <button onclick="entrar()">Entrar</button>
             <div class="resposta" id="div_resposta"></div>
             <div>
@@ -62,13 +73,12 @@
 
       if (emailVar == "" || senhaVar == "") {
           cardErro.style.display = "block"
-          mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-          finalizarAguardar();
+          mensagem_erro.innerHTML = "(Erro! Preencha todos os campos em branco)";
           return false;
       }
       else {
         console.log("Erro")
-          // setInterval(sumirMensagem, 2000);
+          setInterval(sumirMensagem, 2000);
       }
 
       console.log("FORM LOGIN: ", emailVar);
@@ -96,7 +106,7 @@
                   sessionStorage.ID_USUARIO = json.id;
                   sessionStorage.NOME_USUARIO = json.nome;
                   sessionStorage.EMAIL_USUARIO = json.email;
-                  sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+  
 
                   setTimeout(function () {
                     if(sessionStorage.ID_USUARIO == 1){
@@ -113,11 +123,16 @@
 
           } else {
 
-              console.log("Houve um erro ao tentar realizar o login!");
+
+            if (resposta.status == 403) {
+              cardErro.style.display = "block"
+          mensagem_erro.innerHTML = "(Erro! Seu usuário e senha estão incorretos)";
+
+            }
+              console.log("Houve um erro ao tentar realizar o login!", resposta );
 
               resposta.text().then(texto => {
-                  // console.error(texto);
-                  // finalizarAguardar(texto);
+                console.error(texto);
               });
           }
 
@@ -128,8 +143,8 @@
       return false;
   }
 
-  // function sumirMensagem() {
-  //     cardErro.style.display = "none"
-  // }
+  function sumirMensagem() {
+      cardErro.style.display = "none"
+  }
 
 </script>
