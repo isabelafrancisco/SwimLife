@@ -1,7 +1,7 @@
 var usuarioModel = require("../models/usuarioModel");
 var aquarioModel = require("../models/aquarioModel");
 
-function autenticar(req, res) {
+function autenticar(req, res) { /* entrar com o usuário cadastrado no site */
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
 
@@ -52,7 +52,7 @@ function autenticar(req, res) {
 
 }
 
-function cadastrar(req, res) {
+function cadastrar(req, res) { /* cadastrar usuário */
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var nome = req.body.nomeServer;
     // var cpf = req.body.cpfServer;
@@ -94,7 +94,8 @@ function cadastrar(req, res) {
     }
 }
 
-function inserir(req, res) {
+function inserir(req, res) { /* inserindo o id do usuário e o id da notícia */
+
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var idNoticia = req.body.idNoticiaServer;
     var idUsuario = req.body.idUsuarioServer;
@@ -116,7 +117,7 @@ function inserir(req, res) {
             );
 }
 
-function plotar(req, res){
+function plotar(req, res){ /* pegando a fknoticia e a quantidade de cliques que teve */
         usuarioModel.plotar()
             .then(
                 function (resultadoAutenticar) {
