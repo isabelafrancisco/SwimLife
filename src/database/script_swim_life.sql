@@ -56,3 +56,5 @@ INSERT INTO noticias VALUES
 
 SELECT fknoticias, count(total) FROM cliques GROUP BY fknoticias;
 
+select * from usuario;
+
