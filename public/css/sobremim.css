@@ -102,12 +102,20 @@ a:hover {/* estiliza o inicial no header */
    .c-card img {
     border-radius: 4rem;
    }
+
+   .imgs {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+   }
+
    
    .c-card p { /* breve descrição sobre mim */
     /* width: 20rem; */
     text-align: left;
     padding: 0.5rem;
     color: black;
+    font-family: 'Karla', sans-serif;
    }
 
 
@@ -147,6 +155,7 @@ a:hover {/* estiliza o inicial no header */
     text-align: left;
     padding: 0.5rem;
     color: black;
+    font-family: 'Karla', sans-serif;
    }
 
    
