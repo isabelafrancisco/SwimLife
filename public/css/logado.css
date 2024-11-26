@@ -81,6 +81,7 @@ body {
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 300px;
     justify-content: center;
 }
@@ -142,8 +143,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;  
-    flex-direction: column;
-    padding: 1rem; /* deixa espaçado entre a navbar e as imagens */
+    flex-direction: row;/* deixa espaçado entre a navbar e as imagens */
     margin: 2rem; /* deixa espaçado entre a navbar e as imagens */
     color: black;
     box-shadow: 0 0 20px #bfdbfe; /* a cor de funco do card */
@@ -158,11 +158,24 @@ a {
     color: #53C4D0;
    }
 
-   .c-card1 img1 {
+.img1 {
     border-radius: 4rem;
+    /* border: black 1px solid; */
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 800px;
+
+   }
+
+.img1  img{
+    width: 500px;
+
+
    }
    
-   .c-card1 p1 { /* breve descrição sobre mim */
+   .c-card1 .p1 { /* breve descrição sobre mim */
     width: 20rem;
     text-align: center;
     padding: 0.5rem;
@@ -197,7 +210,7 @@ a {
     font-size: 15px;
    }
 
-   .c-card2 img2 {
+   .c-card2 .img2 {
     border-radius: 4rem;
    }
 
@@ -240,7 +253,7 @@ a {
     font-size: 15px;
    }
 
-   .c-card3 img3 {
+   .c-card3 .img3 {
     border-radius: 4rem;
    }
 
@@ -283,7 +296,7 @@ a {
     font-size: 15px;
    }
 
-   .c-card4 img4 {
+   .c-card4 .img4 {
     border-radius: 4rem;
    }
 

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SwimLife | Dashboards</title>
 
-    
+
     <link rel="stylesheet" href="./../css/dashboards.css">
     <link rel="stylesheet" href="./../css/estilo.css" />
     <script src="../js/sessao.js"></script>
@@ -44,29 +44,32 @@
 
             </div>
 
-            <div class="btn-logout" onclick="limparSessao()">
-                <h3>Sair</h3>
+            <div class="btn-logout">
+                <a href="../login2.html">Sair</a>
             </div>
 
         </div>
 
         <div class="dash">
+            <br><br><br>
+            <div class="kpis">
+                <div class="c-card_maior">
+                    <h2>Notícia mais curtida</h2>
+                    <div id="maior"></div>
+                </div> <br><br>
+    
+                <div class="c-card_menor">
+                    <h2>Notícia menos curtida</h2>
+                    <div id="menor"></div>
+                </div>
+            </div>
+            <br><br><br><br><br>
             <div class="c-card_graficos">
-            <div id="graficos" style="width: 200px;">
-                <canvas id="grafico_setor" style="width: 100%;"></canvas>
+                <div id="graficos" style="width: 400px;">
+                    <canvas id="grafico_setor" style="width: 100%;"></canvas>
+                </div>
             </div>
         </div>
-
-            <div class="c-card_maior">
-                <h2>Notícia mais curtida</h2>
-            <div id="maior"></div>
-         </div> <br><br>
-
-            <div class="c-card_menor">
-                <h2>Notícia menos curtida</h2>
-            <div id="menor"></div>
-        </div>
-    </div>
 
 
 
@@ -86,92 +89,92 @@
     var qtd3 = '';
     var qtd4 = '';
 
-    function plotarGrafico(){
+    function plotarGrafico() {
 
         // Enviando o valor da nova input
-    fetch("/usuarios/plotar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      }
-    })
-      .then(function (resposta) {
-        console.log("resposta: ", resposta);
+        fetch("/usuarios/plotar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            }
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
 
-        resposta.json().then(json => {
-                  console.log(json);
-                  console.log(JSON.stringify(json));
-                  console.log(json.id)
-                  n1 = json.noticia1;
-                  n2 = json.noticia2;
-                  n3 = json.noticia3;
-                  n4 = json.noticia4;
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    console.log(json.id)
+                    n1 = json.noticia1;
+                    n2 = json.noticia2;
+                    n3 = json.noticia3;
+                    n4 = json.noticia4;
 
-                  qtd1 = json.quantidade1;
-                  qtd2 = json.quantidade2;
-                  qtd3 = json.quantidade3;
-                  qtd4 = json.quantidade4;
+                    qtd1 = json.quantidade1;
+                    qtd2 = json.quantidade2;
+                    qtd3 = json.quantidade3;
+                    qtd4 = json.quantidade4;
 
-                if(qtd1 > qtd2 && qtd1 > qtd3 && qtd1 > qtd4){
-                    maior.innerHTML = qtd1;
+                    if (qtd1 > qtd2 && qtd1 > qtd3 && qtd1 > qtd4) {
+                        maior.innerHTML = qtd1;
 
-                } else if (qtd2 > qtd1 && qtd2 > qtd3 && qtd2 > qtd4){
-                    maior.innerHTML = qtd2;
+                    } else if (qtd2 > qtd1 && qtd2 > qtd3 && qtd2 > qtd4) {
+                        maior.innerHTML = qtd2;
 
-                } else if(qtd3 > qtd1 && qtd3 > qtd2 && qtd3 > qtd4){
-                    maior.innerHTML = qtd3;
+                    } else if (qtd3 > qtd1 && qtd3 > qtd2 && qtd3 > qtd4) {
+                        maior.innerHTML = qtd3;
 
-                } else if(qtd4 > qtd1 && qtd4 > qtd2 && qtd4 > qtd3){
-                    maior.innerHTML = qtd4;
-                }
+                    } else if (qtd4 > qtd1 && qtd4 > qtd2 && qtd4 > qtd3) {
+                        maior.innerHTML = qtd4;
+                    }
 
 
-                if(qtd1 < qtd2 && qtd1 < qtd3 && qtd1 < qtd4){
-                    menor.innerHTML = qtd1;
+                    if (qtd1 < qtd2 && qtd1 < qtd3 && qtd1 < qtd4) {
+                        menor.innerHTML = qtd1;
 
-                } else if (qtd2 < qtd1 && qtd2 < qtd3 && qtd2 < qtd4){
-                    menor.innerHTML = qtd2;
+                    } else if (qtd2 < qtd1 && qtd2 < qtd3 && qtd2 < qtd4) {
+                        menor.innerHTML = qtd2;
 
-                } else if(qtd3 < qtd1 && qtd3 < qtd2 && qtd3 < qtd4){
-                    menor.innerHTML = qtd3;
+                    } else if (qtd3 < qtd1 && qtd3 < qtd2 && qtd3 < qtd4) {
+                        menor.innerHTML = qtd3;
 
-                } else if(qtd4 < qtd1 && qtd4 < qtd2 && qtd4 < qtd3){
-                    menor.innerHTML = qtd4;
-                }
+                    } else if (qtd4 < qtd1 && qtd4 < qtd2 && qtd4 < qtd3) {
+                        menor.innerHTML = qtd4;
+                    }
 
-                  const graficoSetor = document.getElementById('grafico_setor')
+                    const graficoSetor = document.getElementById('grafico_setor')
 
-                            var grafico_setor = new Chart(graficoSetor, {
-                                type: 'pie', // tipo do gráfico 
-                                data: { // data = todos os valores que serão colocados
-                                    labels: ['noticia1', 'noticia2', 'noticia3', 'noticia4'], // array = vetores que serão utilizados na label
-                                    datasets: [{ // métricas do gráfico = linha
-                                        backgroundColor: ['#79BAEC', '#FF0000', '#ee11aa', '#00ffff'],
-                                        borderColor: ['#79BAEC', '#FF0000', '#ee11aa', '#00ffff'],
-                                        data: [qtd1, qtd2, qtd3, qtd4], // valores do gráfico
-                                        borderWidth: 1 // largura da borda do gráfico
-                                    }]
-                                },
-                                options: { // opções do formato do gráfico
-                                    plugins:{
-                                        legend:{
-                                            position:'top',
-                                            labels:{
-                                                boxHeight:3
-                                            }
-                                        }
+                    var grafico_setor = new Chart(graficoSetor, {
+                        type: 'pie', // tipo do gráfico 
+                        data: { // data = todos os valores que serão colocados
+                            labels: ['noticia1', 'noticia2', 'noticia3', 'noticia4'], // array = vetores que serão utilizados na label
+                            datasets: [{ // métricas do gráfico = linha
+                                backgroundColor: ['#79BAEC', '#FF0000', '#ee11aa', '#00ffff'],
+                                borderColor: ['#79BAEC', '#FF0000', '#ee11aa', '#00ffff'],
+                                data: [qtd1, qtd2, qtd3, qtd4], // valores do gráfico
+                                borderWidth: 1 // largura da borda do gráfico
+                            }]
+                        },
+                        options: { // opções do formato do gráfico
+                            plugins: {
+                                legend: {
+                                    position: 'top',
+                                    labels: {
+                                        boxHeight: 3
                                     }
                                 }
-                          })
-        }
+                            }
+                        }
+                    })
+                }
 
-              );
+                );
 
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-        // finalizarAguardar();
-      });
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                // finalizarAguardar();
+            });
 
     }
 

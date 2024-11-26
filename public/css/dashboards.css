@@ -16,6 +16,8 @@ body {
 }
 
 .dash {
+  display: flex;
+  flex-direction: column;
   width: 80%;
   position: relative;
   top: 0;
@@ -139,6 +141,7 @@ body {
   align-items: center;
   justify-content: center;  
   flex-direction: column;
+  padding: 1rem 2rem;
 
 }
 
@@ -154,4 +157,18 @@ body {
   align-items: center;
   justify-content: center;  
   flex-direction: column;
+  padding: 1rem 2rem;
+}
+
+.kpis {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.c-card_graficos {
+  display: flex;
+  justify-content: center;
+  /* border: solid red; */
+  width: 100%;
 }

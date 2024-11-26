@@ -105,7 +105,7 @@ a:hover {/* estiliza o inicial no header */
 
    .imgs {
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     display: flex;
    }
 
